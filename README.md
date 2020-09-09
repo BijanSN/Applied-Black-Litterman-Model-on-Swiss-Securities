@@ -42,7 +42,7 @@ The Black litterman method can be divided into 3 differents steps :
 * Get the distribution of the views
 * Combining prior and view distributions
 
-# Distribution of the prior
+## Distribution of the prior
 
 First of all, we combine the regular CAPM's weights of the assets using their respective market capitalisation with the covariance matrix and the risk aversion coefficient in order to compute the implied return vector:
 
@@ -57,13 +57,13 @@ Such as,
 τ enables more flexibility in our views by introducing uncertainty.
 The resulting Prior distribution is therfore normally distributed around П, with variance τΣ. Intuitively, by fixing τ=1, we are fully confident about our views.
 
-### 2. Distribution of the views
+## 2. Distribution of the views
 The Black-Litterman model uses multiple inputs such as views of a portfolio manager,
 expected returns and uncertainty level in order to achieve an optimal asset allocation.
 
 Inputs:
 
-* P The “Pick” matrix that connects the assets related to a specific view.
+* P The *Pick* matrix that connects the assets related to a specific view.
 * Q The vector which represents the expected excess return of each view.
 * Ω The diagonal matrix that identifies the uncertainty in the views.
 
@@ -81,11 +81,7 @@ the manager if fully confident about the view.
 The main formula for implementing this approach is the following :
 <img src="https://render.githubusercontent.com/render/math?math=E(R)_{BL}= [  (\tau  \Sigma) ^{-1}  + P^{T}  \Omega^{-1} P]^{-1}  [(\tau   \Sigma )^{-1} \Pi +P^{T} \Omega^{-1} Q]">
 
-
-<img src="https://render.githubusercontent.com/render/math?math=E(R)= [  (\tau  \Sigma) ^{-1}  + [P^{T}  \Omega P]^{-1}  [(\tau   \Sigma )^{-1} \Pi +P^{T} \Omega Q]">
-
-Where,
-E[R]BL is the new combined return vector 
+Where E[R]BL is the new combined return vector. 
 
 The following illustration is a summary of the mathematical derivation above.
 
