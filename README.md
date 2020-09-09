@@ -1,4 +1,4 @@
-# Applied Black-Litterman model and Copula Opinion Pooling on Swiss Equities
+# Applied Black-Litterman model and Copula Opinion Pooling on Swiss Equities/US Yield Curve
 A **Quantitative Risk Management** Project
 
 # Introduction
@@ -36,7 +36,7 @@ as well as a manager’s particular view on the market in order to generate a ne
 expected returns. These views will affect the expected return of the asset concern, tilting out
 our entire portfolio from the efficient MPT frontier.**
 
-The Black litterman method can be divided into 3 differents steps : 
+The Black litterman model can be divided into 3 differents steps : 
 
 * Get the distribution of the prior
 * Get the distribution of the views
@@ -67,7 +67,6 @@ Inputs:
 * Q The vector which represents the expected excess return of each view.
 * Ω The diagonal matrix that identifies the uncertainty in the views.
 
-
 Simply put, the Black-Litterman model is a complex of weighted average of the implied
 equilibrium vector (П) and the vector expected excess returns of each view (Q), in which the
 relative weights are the scaling factor (τ) and the uncertainty of the forecasts (Ω). Investors
@@ -79,12 +78,14 @@ the manager if fully confident about the view.
 ### 3. Combining prior and view distributions
 
 The main formula for implementing this approach is the following :
-<img src="https://render.githubusercontent.com/render/math?math=E(R)_{BL}= [  (\tau  \Sigma) ^{-1}  + P^{T}  \Omega^{-1} P]^{-1}  [(\tau   \Sigma )^{-1} \Pi +P^{T} \Omega^{-1} Q]">
+
+<img src="https://render.githubusercontent.com/render/math?math=E(R)_{BL}= [ (\tau  \Sigma) ^{-1}  + P^{T}  \Omega^{-1} P]^{-1}  [(\tau   \Sigma )^{-1} \Pi +P^{T} \Omega^{-1} Q]">
 
 Where E[R]BL is the new combined return vector. 
 
 The following illustration is a summary of the mathematical derivation above.
-
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Capture.PNG?raw=true">)
+                                                                                                                 
 # 1. Black-Litterman using copula approach (COP)
 
 One of the main drawbacks of the previous BL implementation is embedded into the former
@@ -113,6 +114,8 @@ using “Beyond Black-Litterman in Practice:a Five-Step Recipe to Input Views on
 Markets” from Attilio Meucci, as a benchmark for our analysis. Part of the matlab code of the
 project are borrowed from him in this section. The yield rate are plotted below from different
 maturities, from 3 months to 30 years:
+
+
 
 
 The plot is coherent with the economic theory; ceteris paribus, for a higher maturity
