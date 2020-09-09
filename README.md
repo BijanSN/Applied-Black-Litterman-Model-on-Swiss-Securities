@@ -16,6 +16,7 @@ the above-mentioned approach is relevant nowadays.
 
 
 # Modern Portfolio Theory deficiencies
+
 Through a formalisation of the benefits of diversification and a constrained optimisation using two-dimensions (risk and returns), the Modern Portfolio Theory (MPT) - developed by Harry Markowitz- demonstrated that among the wide spectrum of securities, an optimal combinaison of securities can be found for each level of risk or returns.
 As such, the expected return can be maximized for a given level of risk and vice versa. Those combinaisons, located on the efficient frontier, are called efficient portfolios.
 Among the infinite combinaisons of portfolios on the efficient frontier, some notorious ones are the **Minimum Variance (MVP)** and the **Maximum Sharpe Ratio (MSR)** portfolios. The MVP is simply the portfolio with the lowest risk, the first on the efficient frontier. The MSR portfolio is the portfolio which it's Sharpe ratio (expected excess returns over it's variance) is the highest among the efficient frontier.
@@ -25,7 +26,7 @@ However, this framework receives many criticisms, such as simplifying assumption
 To overcome the MPT deficiencies and provide better flexibility for the manager, Fisher Black and Robert Litterman developed in 1990 the Black Litterman (BL) asset allocation model. The BL approach allows to combine the MPT with some subjectivity, intuitions, particular views of the investor to the equation. It is important to stress that this newly-created portfolio is, following the traditional MPT, below the efficient frontier and therefore considered irrational because we could gain more returns for less risks by choosing the efficient one given the same level of risk.
 
 
-## 2.1 Black-Litterman with a normally distributed prior
+# Black-Litterman with a normally distributed prior
 
 The Black-Litterman method could be interpreted as an extension of the Modern Portfolio
 Theory (MPT) since some of the problems that investors have encountered in applying the MPT
@@ -41,8 +42,8 @@ The Black litterman method can be divided into 3 differents steps :
 * Get the distribution of the views
 * Combining prior and view distributions
 
-
 # Distribution of the prior
+
 First of all, we combine the regular CAPM's weights of the assets using their respective market capitalisation with the covariance matrix and the risk aversion coefficient in order to compute the implied return vector:
 
 <img src="https://render.githubusercontent.com/render/math?math=\Pi = \lambda  \Sigma W_{Mkt}">
@@ -56,16 +57,15 @@ Such as,
 τ enables more flexibility in our views by introducing uncertainty.
 The resulting Prior distribution is therfore normally distributed around П, with variance τΣ. Intuitively, by fixing τ=1, we are fully confident about our views.
 
-
 ### 2. Distribution of the views
 The Black-Litterman model uses multiple inputs such as views of a portfolio manager,
 expected returns and uncertainty level in order to achieve an optimal asset allocation.
 
 Inputs:
 
-*P The “Pick” matrix that connects the assets related to a specific view.
-*Q The vector which represents the expected excess return of each view.
-*Ω The diagonal matrix that identifies the uncertainty in the views.
+* P The “Pick” matrix that connects the assets related to a specific view.
+* Q The vector which represents the expected excess return of each view.
+* Ω The diagonal matrix that identifies the uncertainty in the views.
 
 
 Simply put, the Black-Litterman model is a complex of weighted average of the implied
@@ -75,7 +75,6 @@ relative weights are the scaling factor (τ) and the uncertainty of the forecast
 row in the P-matrix sum up to 1 and in the other case it will sum up to 0. The uncertainty matrix
 contains the variance of the views, where ωk is the uncertainty in the k-th view. If ω = 0 ,
 the manager if fully confident about the view.
-
 
 ### 3. Combining prior and view distributions
 
@@ -88,9 +87,7 @@ The main formula for implementing this approach is the following :
 Where,
 E[R]BL is the new combined return vector 
 
-
 The following illustration is a summary of the mathematical derivation above.
-
 
 # 1. Black-Litterman using copula approach (COP)
 
