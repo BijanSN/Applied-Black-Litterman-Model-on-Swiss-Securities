@@ -20,26 +20,20 @@ Through a formalisation of the benefits of diversification and a constrained opt
 As such, the expected return can be maximized for a given level of risk and vice versa. Those combinaisons, located on the efficient frontier, are called efficient portfolios.
 Among the infinite combinaisons of portfolios on the efficient frontier, some notorious ones are the **Minimum Variance (MVP)** and the **Maximum Sharpe Ratio (MSR)** portfolios. The MVP is simply the portfolio with the lowest risk, the first on the efficient frontier. The MSR portfolio is the portfolio which it's Sharpe ratio (expected excess returns over it's variance) is the highest among the efficient frontier.
 
-However, this framework receives many criticisms, such as simplifying assumptions (the normality of the distribution of the returns for example), the lack of consideration for risk asymetry during downturns and the high input sensitivity, leading very different results given a small change in inputs. The latter problem will be dealt with the COP approach onward. But most importantly,** the MPT considers that each investors share similar views on expected returns on securities**. One could argue that each manager have valuable knowledge on their specific area of expertise, leading , hopefully, in the creation of alpha. As an introduction, the Black litterman model presented below is mearly a weighted average of these valuables views and the markets inputs.
+However, this framework receives many criticisms, such as simplifying assumptions (the Gaussian distribution of the returns for example), the lack of consideration for risk asymetry during downturns and the high input sensitivity, leading very different results given a small change in inputs. The latter problem will be dealt with the COP approach onward. But most importantly,**the MPT considers that each investors share similar views on expected returns on securities**. One could argue that each manager have valuable knowledge on their specific area of expertise, leading , hopefully, in the creation of alpha. As an introduction, the Black litterman model presented below is mearly a weighted average of these valuables views and the markets inputs.
 
 To overcome the MPT deficiencies and provide better flexibility for the manager, Fisher Black and Robert Litterman developed in 1990 the Black Litterman (BL) asset allocation
-model. The BL approach allows to combine the MPT with some subjectivity, intuitions, particular views
-of the investor to the equation. The investor can bring closer the MPT to the real market as its
-intuition took birth within a certain political, macroeconomic spectrum that is neglected. These
-views will affect the expected return of the asset concern, tilting out our entire portfolio from
-the efficient MPT frontier; implying avoidance of unintuitive MPT strategy and turning into
-number the subjectivity. However, this newly-created portfolio is, following the traditional MPT, below the efficient frontier and therefore considered
-irrational because we could gain more return for less risk by the MPT.
+model. The BL approach allows to combine the MPT with some subjectivity, intuitions, particular views of the investor to the equation. It is important to stress that this newly-created portfolio is, following the traditional MPT, below the efficient frontier and therefore considered irrational because we could gain more returns for less risks by choosing the efficient one given the same level of risk.
 
 
 ## 2.1 Black-Litterman with a normally distributed prior
 The Black-Litterman method could be interpreted as an extension of the Modern Portfolio
 Theory (MPT) since some of the problems that investors have encountered in applying the MPT
 (such as high input-sensitivity and mean-variance maximization) are resolved through this
-approach. The idea behind the Black-Litterman model consists of mixing markets assumptions
+approach. **The idea behind the Black-Litterman model consists of mixing markets assumptions
 as well as a manager’s particular view on the market in order to generate a new vector of
 expected returns. These views will affect the expected return of the asset concern, tilting out
-our entire portfolio from the efficient MPT frontier.
+our entire portfolio from the efficient MPT frontier.**
 
 The procedure for implementing this approach is the following (Seimertz 2015):
 
@@ -82,9 +76,9 @@ the manager if fully confident about the view.
 
 # 1. Black-Litterman using copula approach (COP)
 One of the main drawbacks of the previous BL implementation is embedded into the former
-prior described. Indeed, as stated earlier, the prior follows a normal distribution around the
+prior described. Indeed, as stated earlier, **the prior follows a normal distribution around the
 mean of the excessive market returns. In reality, this is not the case at all, as our empirical data
-suggest. To bypass this problem, the copula-opinion pooling (COP) - an extension in a classical
+suggests**. To bypass this problem, the copula-opinion pooling (COP) - an extension in a classical
 Black-Litterman method- implements a prior which correctly reflects the dependency structure
 of the market using multivariate copula. The intuition is the same as before; the Black-Litterman
 method requires 2 inputs: Market views and well as the manager’s. In order to infer the nonparametric
