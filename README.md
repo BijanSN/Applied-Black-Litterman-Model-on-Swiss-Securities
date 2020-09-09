@@ -39,24 +39,30 @@ The procedure for implementing this approach is the following (Seimertz 2015):
 
 ### 1. Analysis of market opinion
 #### Assumptions :
+
 * Returns are normally distributed R ∼ N(E[R],Σ).
 * Expected values of the returns are normally distributed
 * Expected returns do not tend to deviate far from the equilibrium returns.
-* The views of the investor are uncorrelated.
+* The views of investors are uncorrelated.
 * The Covariance matrix can be determined.
+
+
+<img src="https://render.githubusercontent.com/render/math?math=R \sim N(E[R],\Sigma)">
+
 #### Distribution of the prior: 
-* П- Implied equilibrium return vector, that represents the
-best guess possible for the mean
+* П- Implied equilibrium return vector over the risk-free rate
 * τΣ - the uncertainty of this particular guess.
+
+
 
 ### 2. Adding the views of the manager
 The Black-Litterman model uses multiple inputs such as views of a portfolio manager,
 expected returns and uncertainty level in order to achieve an optimal asset allocation.
 Inputs:
+
 P is a “Pick” matrix that connects the assets related to a specific view.
 Q is a vector that represents the expected excess return of each view.
 Ω is a diagonal matrix that identifies the uncertainty in the views
-
 
 
 Basically, the Black-Litterman model is a complex of weighted average of the implied
@@ -69,18 +75,25 @@ the manager if fully confident about the view.
 
 
 ### 3. Combining prior and view distributions
-Π = λΣwmk
+
 
 ### 4. Get a new return distribution and a new vector expected returns
+Π = λΣwmk
+Π= δ Σ wmkt
+δ = (E(r) – rf)/σ2 , risk aversion coefficient 
+Σ =   A covariance matrix of the assets
+
+
+<img src="https://render.githubusercontent.com/render/math?math=E(R)= [  (\tau  \Sigma) ^{-1}  + [P^{T}  \Omega P]^{-1}  [(\tau   \Sigma )^{-1} \Pi +P^{T} \Omega Q]">
 
 
 # 1. Black-Litterman using copula approach (COP)
 One of the main drawbacks of the previous BL implementation is embedded into the former
 prior described. Indeed, as stated earlier, **the prior follows a normal distribution around the
 mean of the excessive market returns. In reality, this is not the case at all, as our empirical data
-suggests**. To bypass this problem, the copula-opinion pooling (COP) - an extension in a classical
+suggests. To bypass this problem, the copula-opinion pooling (COP) - an extension in a classical
 Black-Litterman method- implements a prior which correctly reflects the dependency structure
-of the market using multivariate copula. The intuition is the same as before; the Black-Litterman
+of the market using multivariate copula**. The intuition is the same as before; the Black-Litterman
 method requires 2 inputs: Market views and well as the manager’s. In order to infer the nonparametric
 market prior this time, the probability density function of the market should be
 estimated. The intuition being that past distribution of the market reflects our “prior”
@@ -183,6 +196,9 @@ must go on. To conclude with, we presented a relatively new approach to asset ma
 combining a specialist view with the market’s can potentially yields higher results, depending
 on certains criteria, such as the confidence of the manager on his views. An extension would
 be to analyse if an optimal confidence level (yielding a better allocation) could be inferred
+
+#Reference 
+[1](http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=5472145&fileOId=5472158)
 
 
 
