@@ -1,4 +1,4 @@
-# Applied Black-Litterman model and Copula Opinion Pooling on Swiss Equities/US Yield Curve
+# Applied Black-Litterman model on Swiss Equities
 A **Quantitative Risk Management** Project
 
 # Introduction
@@ -26,7 +26,7 @@ However, this framework receives many criticisms, such as simplifying assumption
 To overcome the MPT deficiencies and provide better flexibility for the manager, Fisher Black and Robert Litterman developed in 1990 the Black Litterman (BL) asset allocation model. The BL approach allows to combine the MPT with some subjectivity, intuitions, particular views of the investor to the equation. It is important to stress that this newly-created portfolio is, following the traditional MPT, below the efficient frontier and therefore considered irrational because we could gain more returns for less risks by choosing the efficient one given the same level of risk.
 
 
-# Black-Litterman with a normally distributed prior
+# Black-Litterman model
 
 The Black-Litterman method could be interpreted as an extension of the Modern Portfolio
 Theory (MPT) since some of the problems that investors have encountered in applying the MPT
@@ -49,23 +49,23 @@ First of all, we combine the regular CAPM's weights of the assets using their re
 <img src="https://render.githubusercontent.com/render/math?math=\Pi = \lambda  \Sigma W_{Mkt}">
 
 Such as,
-* П The implied equilibrium return vector over the risk-free rate
-* λ The risk aversion coefficient 
-* Σ The Covariance matrix of the assets
-* τ The respective weights of views
+* **П**: The implied equilibrium return vector over the risk-free rate
+* **λ**: The risk aversion coefficient 
+* **Σ**: The Covariance matrix of the assets
+* **τ**: The respective weights of views
 
 τ enables more flexibility in our views by introducing uncertainty.
 The resulting Prior distribution is therfore normally distributed around П, with variance τΣ. Intuitively, by fixing τ=1, we are fully confident about our views.
 
-## 2. Distribution of the views
+## Distribution of the views
 The Black-Litterman model uses multiple inputs such as views of a portfolio manager,
 expected returns and uncertainty level in order to achieve an optimal asset allocation.
 
 Inputs:
 
-* P The *Pick* matrix that connects the assets related to a specific view.
-* Q The vector which represents the expected excess return of each view.
-* Ω The diagonal matrix that identifies the uncertainty in the views.
+* **P**: The *Pick* matrix that connects the assets related to a specific view.
+* **Q**: The vector which represents the expected excess return of each view.
+* **Ω**: The diagonal matrix that identifies the uncertainty in the views.
 
 Simply put, the Black-Litterman model is a complex of weighted average of the implied
 equilibrium vector (П) and the vector expected excess returns of each view (Q), in which the
@@ -75,7 +75,7 @@ row in the P-matrix sum up to 1 and in the other case it will sum up to 0. The u
 contains the variance of the views, where ωk is the uncertainty in the k-th view. If ω = 0 ,
 the manager if fully confident about the view.
 
-### 3. Combining prior and view distributions
+## Combining prior and view distributions
 
 The main formula for implementing this approach is the following :
 
@@ -86,4 +86,6 @@ Where E[R]BL is the new combined return vector.
 The following illustration is a summary of the mathematical derivation above.
  ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/BL_Summary.PNG)
                                                                                                                  
+
+# Black-litterman model in practice on Swiss equities
 
