@@ -115,8 +115,7 @@ Markets” from Attilio Meucci, as a benchmark for our analysis. Part of the mat
 project are borrowed from him in this section. The yield rate are plotted below from different
 maturities, from 3 months to 30 years:
 
-
-
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/curve3d2%20(2019_05_27%2022_41_04%20UTC).jpg)
 
 The plot is coherent with the economic theory; ceteris paribus, for a higher maturity
 corresponds to a higher risk premium and therefore a higher yield. Inversions of the yield curve
@@ -127,6 +126,9 @@ maturities.
 We can extract the linear dependency among the curves by the simple pearson correlation,
 as shown with this heatmap:
 
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Corr_Yield%20(2019_05_27%2022_41_04%20UTC).jpg)
+
+
 As our intuition suggests, the closer on yield is from another one, the higher is the
 correlation between them, since they are affected by the same risk factors. The correlation still
 remains above 0.6, which is consequent. Now, we want to capture other form of dependences,
@@ -136,6 +138,7 @@ function, which didn’t allow the derivation into the PDF. A kernel smoothing i
 CDF in order to correctly represent the density of the change in yield.
 
 Compute the market distribution now yield the following results:
+
 
 As we can see, the distribution of the yield changes are leptokurtic and mostly centered
 around zero. Applying univariate Jarque-Bera tests and Mardia’s multivariate test on the change
@@ -150,6 +153,11 @@ For example, the histogram of the 3 month yield versus the 2 year yield can be s
 It is not really informative by itself, but by extracting the margins from theses distribution, the
 notion of copula emerges.
 
+
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Copula%20(2019_05_27%2022_41_04%20UTC).jpg)
+
+
+
 As we can see, there is a clustering of data on both side of the tails, which corresponds to
 a t-copula. We will therefore use this model to represent the codependency of the weekly
 changes. Finally, the parameter of the t-copula are estimated through a maximum-likelihood.
@@ -157,7 +165,8 @@ Following the same example as Attilio Meucci (2006), the views are defined such 
 investor expects a steepening of the intermediate yield curve. More specifically, the manager
 expected an increase of 10 basis point of the spread 2-20 years as well as a 5 .bp bullish view
 on the 2-5-10 butterfly (short 2th&10th year and long the 5th year yield)
-20
+
+
 The first line of the pick matrix is therefore [0 -1 0 0 0 1] with an associated coefficient of
 0.001. The second line is [0 -0.5 1 -0.5 0 0] with a coefficient of 0.0005. The vector of expected
 excess returns of each view ‘Q’ is therefore [0.001, 0.0005].
