@@ -154,6 +154,8 @@ It is not really informative by itself, but by extracting the margins from these
 notion of copula emerges.
 
 
+![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/3m-2y%20(2019_05_27%2022_41_04%20UTC).jpg)
+
  ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Copula%20(2019_05_27%2022_41_04%20UTC).jpg)
 
 
