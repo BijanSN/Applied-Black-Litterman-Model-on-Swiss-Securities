@@ -84,7 +84,7 @@ The main formula for implementing this approach is the following :
 Where E[R]BL is the new combined return vector. 
 
 The following illustration is a summary of the mathematical derivation above.
- ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Capture.PNG?raw=true">)
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/BL_Summary.PNG">)
                                                                                                                  
 # 1. Black-Litterman using copula approach (COP)
 
@@ -115,7 +115,7 @@ Markets” from Attilio Meucci, as a benchmark for our analysis. Part of the mat
 project are borrowed from him in this section. The yield rate are plotted below from different
 maturities, from 3 months to 30 years:
 
- ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/curve3d2%20(2019_05_27%2022_41_04%20UTC).jpg)
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/Curve%202D%20(2019_05_27%2022_41_04%20UTC).jpg)
 
 The plot is coherent with the economic theory; ceteris paribus, for a higher maturity
 corresponds to a higher risk premium and therefore a higher yield. Inversions of the yield curve
@@ -123,10 +123,13 @@ may suggest worsening expectation concerning the future, hence higher maturities
 lesser yield. Furthermore, the yield curve can be derived as well, adding a third dimension:
 maturities.
 
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/curve3d2%20(2019_05_27%2022_41_04%20UTC).jpg)
+
+
 We can extract the linear dependency among the curves by the simple pearson correlation,
 as shown with this heatmap:
 
- ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Corr_Yield%20(2019_05_27%2022_41_04%20UTC).jpg)
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/Corr_Yield%20(2019_05_27%2022_41_04%20UTC).jpg)
 
 
 As our intuition suggests, the closer on yield is from another one, the higher is the
