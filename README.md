@@ -33,7 +33,7 @@ Theory (MPT) since some of the problems that investors have encountered in apply
 (such as high input-sensitivity and mean-variance maximization) are resolved through this
 approach. **The idea behind the Black-Litterman model consists of mixing markets assumptions
 as well as a manager’s particular view on the market in order to generate a new vector of
-expected returns. These views will affect the expected return of the asset concern, tilting out
+expected returns. These views will affect the expected return of the asset concerned, tilting out
 our entire portfolio from the efficient MPT frontier.**
 
 The Black litterman model can be divided into 3 differents steps : 
