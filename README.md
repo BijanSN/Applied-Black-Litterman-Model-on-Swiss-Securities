@@ -84,7 +84,7 @@ The main formula for implementing this approach is the following :
 Where E[R]BL is the new combined return vector. 
 
 The following illustration is a summary of the mathematical derivation above.
- ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/BL_Summary.PNG">)
+ ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/BL_Summary.PNG)
                                                                                                                  
 # 1. Black-Litterman using copula approach (COP)
 
