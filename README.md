@@ -1,6 +1,9 @@
 # Applied Black-Litterman model on Swiss Equities
 A **Quantitative Risk Management** Project
 
+* **GetData.R** : Extract some Swiss bluechips's daily stock prices from yahoo finance and create the datasets.
+* **BlackLittermanOnSwissPortfolio.m** : Following predefined specific views on the Swiss market, the associated Optimal Black-Litterman allocation is computed as well as several figures. 
+
 # Introduction
 
 Departing from the CAPM’s strong assumption of the homogeneity of expectations of risk
