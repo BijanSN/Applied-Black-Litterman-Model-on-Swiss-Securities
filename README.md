@@ -92,7 +92,19 @@ The following illustration is a summary of the mathematical derivation above.
 
 # Black-litterman model in practice on Swiss equities
 
-WIP
+Let's define absolute and relative views on the Swiss market, with different level of uncertainty.
+
+View 1 : Nestlé SA is going to have 2% annual return with uncertainty 1e-3.
+         This is a absolute view, with high uncertainty.
+
+View 2 : Givaudan SA is going to have 4% annual return with uncertainty 1e-3.
+         This is a absolute view, with high uncertainty.
+
+View 3 : Novartis SA is going to outperform Credit suisse Group by 1% annual return with uncertainty 1e-5.
+         This is a relative view ,with low uncertainty.
+
+
+* Writing in progress, to be continued * 
 
 ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/PieAllocation.png)
 
