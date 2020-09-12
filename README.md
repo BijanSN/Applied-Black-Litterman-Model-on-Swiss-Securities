@@ -89,3 +89,10 @@ The following illustration is a summary of the mathematical derivation above.
 
 # Black-litterman model in practice on Swiss equities
 
+WIP
+
+![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/PieAllocation.png)
+
+# References
+
+https://ww2.mathworks.cn/help/finance/examples/black-litterman-portfolio-optimization.html
