@@ -3,7 +3,7 @@
 * **GetData.R** : Extract some Swiss bluechips's daily stock prices from yahoo finance and create the datasets.
 * **BlackLittermanOnSwissPortfolio.m** : Following predefined specific views on the Swiss market (detailed below), the associated Optimal Black-Litterman allocation is computed as well as several figures. 
 
-* **Main.m** : Generalisation of the former code. Applies the Black-litterman asset allocation model following the user input (Matrix P, Q, Omega) under a scalable number of relatives or absolutes views on the market. 
+* **Main.m** : Generalisation of the former code. Applies the Black-litterman asset allocation model following the user input (Matrix P, Q, Omega) under a scalable number of relatives and/or absolutes views on the market. 
 
 
 # Introduction
@@ -106,7 +106,7 @@ View 3 : Novartis SA is going to outperform Credit suisse Group by 1% annual ret
          This is a relative view ,with low uncertainty.
 
 
-* Writing in progress, to be continued * 
+Writing in progress ...
 
 ![alt text](https://github.com/BijanSN/Applied-Black-Litterman-on-Swiss-portfolios/blob/master/Plots/PieAllocation.png)
 
