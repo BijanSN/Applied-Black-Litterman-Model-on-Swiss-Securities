@@ -1,8 +1,10 @@
 # Applied Black-Litterman model on Swiss Equities
-A **Quantitative Risk Management** Project
 
 * **GetData.R** : Extract some Swiss bluechips's daily stock prices from yahoo finance and create the datasets.
 * **BlackLittermanOnSwissPortfolio.m** : Following predefined specific views on the Swiss market, the associated Optimal Black-Litterman allocation is computed as well as several figures. 
+
+* **Main.m** : Generalisation of the former code. Applies the Black-litterman asset allocation model following the user input (Matrix P, Q, Omega) under a scalable number of relatives or absolutes views on the market. 
+
 
 # Introduction
 
